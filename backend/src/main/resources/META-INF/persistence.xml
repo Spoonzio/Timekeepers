@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="timesheet-jpa">
+        <jta-data-source>java:jboss/datasources/timesheet</jta-data-source>
+        <class>com.comp4911.backend.models.CredentialEntity</class>
+        <class>com.comp4911.backend.models.EmployeeEntity</class>
+        <class>com.comp4911.backend.models.PaygradeEntity</class>
+        <class>com.comp4911.backend.models.TimesheetEntity</class>
+        <class>com.comp4911.backend.models.TimesheetrowEntity</class>
+        <class>com.comp4911.backend.models.ProjectPackageEntity</class>
+        <class>com.comp4911.backend.models.WeeklyReportEntity</class>
+        <properties>
+            <property name="toplink.jdbc.url" value="jdbc:mysql://localhost:3306/timesheet"/>
+            <property name="toplink.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/timesheet"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost:3306/timesheet"/>
+            <property name="openjpa.ConnectionDriverName" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/timesheet"/>
+            <property name="eclipselink.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        </properties>
+    </persistence-unit>
+</persistence>
